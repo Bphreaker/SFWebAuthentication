@@ -16,14 +16,7 @@
             <feature name="ASWebAuthSession">
                 <param name="ios-package" value="ASWebAuthSession" />
                 <param name="onload" value="true" />
-            </feature>
-            
-        <preference name="WKWebViewOnly" value="true" />
-            <feature name="CDVWKWebViewEngine">
-                <param name="ios-package" value="CDVWKWebViewEngine" />
-            </feature>
-        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-                
+            </feature>                
         </config-file>
 
         <header-file src="src/ios/ASWebAuthSession.h" />
