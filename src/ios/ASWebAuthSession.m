@@ -23,7 +23,7 @@ ASWebAuthenticationSession *_asAuthenticationVC;
                                        if (callbackURL) {
                                            result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: callbackURL.absoluteString];
                                        } else {
-                                           if(error == nil){
+                                           if(error != nil && error.code == 1){
                                                 result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"cancel"];
                                            } else {
                                                 result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"error"];
