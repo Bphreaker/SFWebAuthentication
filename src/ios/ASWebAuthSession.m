@@ -5,7 +5,10 @@
 API_AVAILABLE(ios(12.0))
 ASWebAuthenticationSession *_asAuthenticationVC;
 @implementation ASWebAuthSession;
+@property (nonatomic) BOOL prefersEphemeralWebBrowserSession;
+
 - (void)pluginInitialize {
+    prefersEphemeralWebBrowserSession = YES;
 }
 -(void)appIsActive {
     [_asAuthenticationVC start];
