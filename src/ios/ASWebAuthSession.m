@@ -6,14 +6,13 @@ API_AVAILABLE(ios(12.0))
 ASWebAuthenticationSession *_asAuthenticationVC;
 @implementation ASWebAuthSession;
 
-
 - (void)pluginInitialize {
-    _asAuthenticationVC.prefersEphemeralWebBrowserSession = YES;
 }
 -(void)appIsActive {
     [_asAuthenticationVC start];
 }
 - (void)start:(CDVInvokedUrlCommand *)command {
+    
     if (@available(iOS 12.0, *)) {
         NSString* redirectScheme = [command.arguments objectAtIndex:0];
         NSURL* requestURL = [NSURL URLWithString:[command.arguments objectAtIndex:1]];
@@ -35,6 +34,7 @@ ASWebAuthenticationSession *_asAuthenticationVC;
                                        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
                                         _asAuthenticationVC = nil;
                                    }];
+        _asAuthenticationVC.prefersEphemeralWebBrowserSession = YES;
         // Need to keep a strong reference for < iOS 13.0 until the authentication session is complete
         _asAuthenticationVC = authenticationVC;
         if (@available(iOS 13.0, *)) {
