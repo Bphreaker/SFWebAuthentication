@@ -16,8 +16,14 @@
             <feature name="ASWebAuthSession">
                 <param name="ios-package" value="ASWebAuthSession" />
                 <param name="onload" value="true" />
-                <param name="prefersEphemeralWebBrowserSession" value="true" />
             </feature>
+        </config-file>
+        
+        <config-file target="*-Info.plist" parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities">
+                <array>
+                        <bool name="IsSupported">true</bool>
+                        <bool name="EphemeralBrowserSessionIsSupported">true</bool>
+                </array>
         </config-file>
 
         <header-file src="src/ios/ASWebAuthSession.h" />
