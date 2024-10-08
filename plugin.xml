@@ -30,9 +30,7 @@
                     </true>
             </array>
         </config-file>
-        <config-file target="*-Info.plist" parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities">
-            <string>$EphemeralBrowserSessionIsSupported</string>
-        </config-file>  
+        
 
         <header-file src="src/ios/ASWebAuthSession.h" />
         <source-file src="src/ios/ASWebAuthSession.m" />
