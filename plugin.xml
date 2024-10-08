@@ -23,7 +23,12 @@
         <preference name="EphemeralBrowserSessionIsSupported" default="True" />
                 
         <config-file target="*-Info.plist" parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities">
-            <string>$IsSupported</string>
+            <array>
+                    <key>IsSupported</key>
+                    </true>
+                    <key>EphemeralBrowserSessionIsSupported</key>
+                    </true>
+            </array>
         </config-file>
         <config-file target="*-Info.plist" parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities">
             <string>$EphemeralBrowserSessionIsSupported</string>
