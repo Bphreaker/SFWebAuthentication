@@ -25,9 +25,9 @@
         <config-file target="*-Info.plist" parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities">
             <array>
                     <key>IsSupported</key>
-                    </true>
+                    <true/>
                     <key>EphemeralBrowserSessionIsSupported</key>
-                    </true>
+                    <true/>
             </array>
         </config-file>
         
