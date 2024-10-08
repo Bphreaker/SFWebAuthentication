@@ -18,15 +18,12 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-
-        <preference name="IsSupported" default="True" />
-        <preference name="EphemeralBrowserSessionIsSupported" default="True" />
                 
         <config-file target="*-Info.plist" parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities">
-            <array>
-                    <key name="IsSupported"> <true/> </key>
-                    <key name="EphemeralBrowserSessionIsSupported"><true/></key>
-            </array>
+            <dict> 
+                    <key>IsSupported</key> <true/>
+                    <key>EphemeralBrowserSessionIsSupported</key> <true/>
+            </dict>
         </config-file>
         
 
